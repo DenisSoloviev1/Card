@@ -1,0 +1,93 @@
+@import "../../shared/Variables.scss";
+@import "../../shared/Animations.scss";
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20% 0 10%;
+  gap: 2rem;
+
+  .intro,
+  .aboutMe,
+  .skills,
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: $color-gray;
+
+    title {
+      display: block;
+      border-radius: 3rem;
+      padding: 0.5rem 1rem;
+      background-color: $color-red;
+      @include adaptiv-font(40, 16);
+    }
+    h1 {
+      padding: 0.5rem 0;
+    }
+    h1,
+    p {
+      text-align: center;
+    }
+  }
+}
+
+
+@media screen and (min-width: 769px) {
+  main {
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+
+    .intro,
+    .aboutMe,
+    .skills,
+    .portfolio {
+      align-items: start;
+      width: 50%;
+      height: 65%;
+      padding: 2rem;
+      border-radius: 0 3rem 3rem 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      title {
+        display: block;
+        border-radius: 3rem;
+        padding: 0 0.5rem;
+        background-color: $color-red;
+      }
+
+      h1,
+      p {
+        text-align: left;
+      }
+    }
+  }
+}
+
+// @media screen and (min-width: 769px) and (max-width: 1339px) {
+//   main {
+//     .intro,
+//     .aboutMe,
+//     .skills,
+//     .portfolio {
+//       width: 50%;
+//       height: 40%;
+//     }
+//   }
+// }

@@ -1,0 +1,63 @@
+@import "../../../shared/Variables.scss";
+@import "../../../shared/Animations.scss";
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  border: 2px solid $color-white;
+  width: 65%;
+  min-width: 210px;
+  padding: 1rem;
+
+  .myPhoto {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+  }
+  .bio {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 2rem);
+    height: 25%;
+    border-radius: 0 0 1rem 1rem;
+    backdrop-filter: blur(0.5rem);
+    font-weight: 700;
+    text-shadow: 5px 5px 5px $color-black;
+    gap: 0.5rem;
+    
+    span{
+      animation: pulse 1s infinite;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .card {
+    border-radius: 12rem 3rem 3rem 3rem;
+    width: 35%;
+    height: 80%;
+
+    .myPhoto {
+      border-radius: 11rem 2rem 2rem 2rem;
+    }
+    .bio {
+      border-radius: 0 0 2rem 2rem;
+      gap: 1rem;
+    }
+  }
+}
+
+// @media screen and (min-width: 769px) and (max-width: 1339px) {
+//   .card {
+//     width: 35%;
+//     height: 55%;
+//   }
+// }

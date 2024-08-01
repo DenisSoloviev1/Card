@@ -1,0 +1,70 @@
+@import "../../shared/Variables.scss";
+@import "../../shared/Animations.scss";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  min-height: 50px;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  z-index: 2;
+  background-color: $color-black;
+  border-bottom: 2px solid $color-gray;
+
+  nav {
+    display: none;
+    width: 90%;
+    height: 80%;
+    background-color: $color-gray;
+    border-radius: 3rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      width: 100%;
+      height: 100%;
+      color: $color-white;
+
+      svg {
+        margin: 10%;
+      }
+    }
+    .active {
+      color: $color-red;
+
+      svg {
+        fill: $color-red;
+        animation: bounce 1s;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 5%;
+    height: 100%;
+    padding: 0.5rem;
+    background-color: transparent;
+    border-bottom: 0;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
