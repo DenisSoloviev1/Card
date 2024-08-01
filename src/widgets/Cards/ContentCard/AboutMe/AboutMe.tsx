@@ -56,7 +56,7 @@ const AboutMe: React.FC = () => {
       <div className="aboutInfo">
         {AgeCounter()}
         <span>
-          2<p>готовых проекта</p>
+          3<p>готовых проекта</p>
         </span>
       </div>
     </div>
