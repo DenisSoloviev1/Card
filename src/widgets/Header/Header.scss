@@ -9,13 +9,14 @@ header {
   flex-direction: row;
   align-items: center;
   width: 100%;
-  height: 10%;
   min-height: 50px;
+  max-height: 100px;
+  height: 10%;
   box-sizing: border-box;
   padding: 0.5rem 1rem;
   z-index: 2;
   background-color: $color-black;
-  border-bottom: 2px solid $color-gray;
+  border-bottom: 1px solid rgba(126, 134, 142, 10%);
 
   nav {
     display: none;
@@ -48,7 +49,7 @@ header {
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 801px) {
   header {
     display: flex;
     flex-direction: column;
@@ -56,6 +57,7 @@ header {
     align-items: center;
     width: 5%;
     height: 100%;
+    max-height: none;
     padding: 0.5rem;
     background-color: transparent;
     border-bottom: 0;

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import p5 from 'p5';
-import styles from './ParticleSystem.module.scss';
+import classes from './ParticleSystem.module.scss';
 
 interface ParticleSystemProps {}
 
@@ -157,7 +157,7 @@ const ParticleSystem: React.FC<ParticleSystemProps> = () => {
     }
   }, []);
 
-  return <div ref={sketchRef} className={styles.particleSystem} />;
+  return <div ref={sketchRef} className={classes.particleSystem} />;
 }
 
 export default ParticleSystem;

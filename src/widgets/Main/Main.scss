@@ -3,91 +3,82 @@
 
 main {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20% 0 10%;
-  gap: 2rem;
+  height: 100%;
 
-  .intro,
-  .aboutMe,
-  .skills,
-  .portfolio {
+  .container {
+    max-width: 1920px;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 70%;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: $color-gray;
-
-    title {
-      display: block;
-      border-radius: 3rem;
-      padding: 0.5rem 1rem;
-      background-color: $color-red;
-      @include adaptiv-font(40, 16);
-    }
-    h1 {
-      padding: 0.5rem 0;
-    }
-    h1,
-    p {
-      text-align: center;
-    }
-  }
-}
-
-
-@media screen and (min-width: 769px) {
-  main {
-    flex-direction: row;
     justify-content: center;
-    width: 90%;
-    height: 100%;
-    gap: 0;
-    padding: 0;
-    overflow: hidden;
+    align-items: center;
+    padding-top: 110px;
+    margin: 0 auto;
+    gap: 30px;
+    box-sizing: border-box;
 
     .intro,
     .aboutMe,
     .skills,
     .portfolio {
-      align-items: start;
-      width: 50%;
-      height: 65%;
-      padding: 2rem;
-      border-radius: 0 3rem 3rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-height: 100vh;
+      width: 70%;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: $color-gray;
       overflow-y: auto;
-      overflow-x: hidden;
 
-      &::-webkit-scrollbar {
-        width: 0;
-      }
-
-      title {
-        display: block;
-        border-radius: 3rem;
-        padding: 0 0.5rem;
+      h2 {
+        border-radius: 50px;
+        padding: 10px 20px;
         background-color: $color-red;
-      }
-
-      h1,
-      p {
-        text-align: left;
+        @include adaptiv-font(40, 16);
       }
     }
   }
+
+  h1 {
+    padding: 10px 0;
+  }
+  h1,
+  p {
+    text-align: center;
+  }
 }
 
-// @media screen and (min-width: 769px) and (max-width: 1339px) {
-//   main {
-//     .intro,
-//     .aboutMe,
-//     .skills,
-//     .portfolio {
-//       width: 50%;
-//       height: 40%;
-//     }
-//   }
-// }
+@media screen and (min-width: 801px) {
+  main {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 90%;
+      height: 100%;
+      gap: 0;
+      padding: 0 50px;
+
+      .intro,
+      .aboutMe,
+      .skills,
+      .portfolio {
+        align-items: start;
+        width: 50%;
+        height: 65%;
+        border-radius: 0 50px 50px 0;
+
+        h2 {
+          padding: 5px 10px;
+          background-color: $color-red;
+        }
+      }
+    }
+
+    h1,
+    p {
+      text-align: left;
+    }
+  }
+}

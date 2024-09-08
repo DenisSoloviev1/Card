@@ -1,0 +1,53 @@
+@import "../../shared/Variables.scss";
+@import "../../shared/Animations.scss";
+
+.buttonCircleGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+
+  .circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid $color-white;
+    margin: 20px;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        animation: rotating 6s infinite linear;
+      }
+
+      svg {
+        width: 50%;
+        position: absolute;
+        margin: auto;
+      }
+    }
+  }
+  a:hover {
+    svg {
+      animation: pulse 2s infinite;
+    }
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .buttonCircleGroup {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../shared/Variables.scss";
+@import "../../shared/Animations.scss";
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .wrap {
+    flex-direction: row;
+
+    .left,
+    .right {
+      width: 50%;
+    }
+  }
+}

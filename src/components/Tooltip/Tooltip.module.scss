@@ -1,0 +1,23 @@
+@import "../../shared/Variables.scss";
+
+.tooltipContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+
+  .tooltip {
+    position: absolute;
+    left: 85%;
+    border-radius: 30px;
+    background-color: $color-gray;
+    padding: 5px 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    border: 2px solid $color-white;
+    z-index: 2;
+    @include adaptiv-font(24, 8);
+  }
+}

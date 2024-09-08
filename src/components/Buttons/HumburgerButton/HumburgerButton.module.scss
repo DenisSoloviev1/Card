@@ -1,0 +1,42 @@
+@import "../../../shared/Variables.scss";
+
+.humburgerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
+  height: 100%;
+  background-color: inherit;
+  box-sizing: border-box;
+
+  svg {
+    height: 100%;
+  }
+}
+
+.humburgerButton:hover,
+.humburgerButton:active {
+  
+  svg {
+    fill: $color-red;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .humburgerButton {
+    height: 0;
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-color: $color-gray;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+    }
+  }
+}

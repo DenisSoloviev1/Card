@@ -1,0 +1,35 @@
+@import "../../shared/Variables.scss";
+@import "../../shared/Animations.scss";
+
+.aboutInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 0.5rem;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      color: $color-red;
+      font-weight: 700;
+      @include adaptiv-font(64, 24);
+
+    }
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .aboutInfo {
+    flex-direction: row;
+    justify-content: space-around;
+
+    p {
+      align-items: start;
+    }
+  }
+}
