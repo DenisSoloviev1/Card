@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import classes from "./Portfolio.module.scss";
 import Project from "../../components/ProjectsCard/ProjectCard.tsx";
 import MoreInfoCard from "../../components/MoreInfoCard/MoreInfoCard.tsx";
-import LandingClinic from "../../assets/images/Landing-Clinic/slide0.png";
-import RickAndMorty from "../../assets/images/Rick-and-Morty/slide0.png";
-import PhotoAlbum from "../../assets/images/PhotoAlbum/slide0.png";
-import Sweetshop from "../../assets/images/Sweetshop/slide0.png";
+import { arrayImgClinic } from "../../assets/images.tsx";
+import { arrayImgPhotoAlbum } from "../../assets/images.tsx";
+import { arrayImgRickAndMorty } from "../../assets/images.tsx";
+import { arrayImgSweetshop } from "../../assets/images.tsx";
 
 const Portfolio: React.FC = () => {
   const [activeProject, setActiveProject] = useState<string | null>(null);
@@ -21,7 +21,7 @@ const Portfolio: React.FC = () => {
       <section className={classes.wrap}>
         <div className={classes.left}>
           <Project
-            images={LandingClinic}
+            images={arrayImgClinic[0].image}
             text={"Лендинг для сайта клиники"}
             handleClick={() => handleClick("LandingClinic")}
           >
@@ -36,7 +36,7 @@ const Portfolio: React.FC = () => {
           </Project>
 
           <Project
-            images={Sweetshop}
+            images={arrayImgSweetshop[0].image}
             text={"Лендинг для кондитерской"}
             handleClick={() => handleClick("Sweetshop")}
           >
@@ -53,7 +53,7 @@ const Portfolio: React.FC = () => {
 
         <div className={classes.right}>
           <Project
-            images={RickAndMorty}
+            images={arrayImgRickAndMorty[0].image}
             text={'Информационный сайт "Rick and Morty"'}
             handleClick={() => handleClick("RickAndMorty")}
           >
@@ -68,7 +68,7 @@ const Portfolio: React.FC = () => {
           </Project>
 
           <Project
-            images={PhotoAlbum}
+            images={arrayImgPhotoAlbum[0].image}
             text={"Лендинг фотоальбом"}
             handleClick={() => handleClick("PhotoAlbum")}
           >

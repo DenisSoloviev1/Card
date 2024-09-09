@@ -15,8 +15,8 @@ const Project: React.FC<ProjectProps> = ({ images, text, handleClick, children }
         <img src={images} alt="Project img" />
         <p className={classes.text}>{text}</p>
       </div>
-      <h4>{text}</h4>
-      {children && <div className={classes.children}>{children}</div>}
+      <figcaption><h4>{text}</h4></figcaption>
+      {children && <>{children}</>}
     </figure>
   );
 };

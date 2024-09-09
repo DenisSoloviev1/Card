@@ -19,14 +19,14 @@ const MoreInfoCard: React.FC<MoreInfoCardProps> = ({
       className={`${classes.modalWindow} ${show ? classes.show : ""}`}
       onClick={handleClick}
     >
-      <div
+      <section
         className={classes.moreInfoCard}
         onClick={(e) => e.stopPropagation()}
       >
         <h4>{name}</h4>
         <p>{text}</p>
         <button onClick={handleClick}>Закрыть</button>
-      </div>
+      </section>
     </div>
   );
 };

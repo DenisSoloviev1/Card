@@ -1,4 +1,5 @@
 @import "../../shared/Variables.scss";
+@import "../../shared/Animations.scss";
 
 .menu {
   display: none;
@@ -15,8 +16,10 @@
   overflow: auto;
   background-color: rgba(28, 28, 40, 0.9);
   @include adaptiv-font(40, 16);
+  animation: slide 0.5s ease-in-out;
 
-  title {
+
+  .title {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -34,33 +37,32 @@
 
       svg {
         height: 100%;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    button:hover{
+      svg{
+        fill: $color-red;
       }
     }
   }
+
   ul {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 20px;
     li {
       list-style-type: none;
       @include adaptiv-font(48, 24);
-      padding-top: 1rem;
+      padding-top: 20px;
 
       a {
         display: flex;
         align-items: center;
-        color: $color-white;
         gap: 5%;
 
         svg {
           width: 15%;
-        }
-      }
-      .active {
-        color: $color-red;
-
-        svg {
-          fill: $color-red;
         }
       }
     }
@@ -71,7 +73,7 @@
   display: flex;
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 901px) {
   .menu.show {
     width: 25%;
     padding: 40px 20px;

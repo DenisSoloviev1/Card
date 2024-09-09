@@ -17,7 +17,7 @@
   @include adaptiv-font(40, 16);
   white-space: nowrap;
   border: 3px solid $color-red;
-  transition: all 0.5 ease;
+  transition: all 0.5s ease;
 
   svg {
     width: 10%;
@@ -37,7 +37,7 @@
     }
   }
 }
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 1400px) {
   .dowloadButton {
     width: 70%;
   }

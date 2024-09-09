@@ -5,9 +5,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
+  margin-top: 20px;
   box-sizing: border-box;
 
   .circle {
@@ -46,8 +46,9 @@
   }
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 1400px) {
   .buttonCircleGroup {
     flex-direction: row;
+    margin-top: 0;
   }
 }

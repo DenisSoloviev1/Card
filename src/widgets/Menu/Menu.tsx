@@ -15,12 +15,12 @@ interface MenuProps {
 const Menu: React.FC<MenuProps> = ({ show, handleClose }) => {
   return (
     <div className={`${classes.menu} ${show ? classes.show : ""}`}>
-      <title>
+      <div className={classes.title}>
         <h2>Denis</h2>
         <button onClick={handleClose}>
           <CloseSvg />
         </button>
-      </title>
+      </div>
 
       <ul>
         <li>

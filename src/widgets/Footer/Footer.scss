@@ -7,6 +7,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid rgba(126, 134, 142, 10%);
 
   nav {
     width: 100%;
@@ -33,13 +34,14 @@ footer {
   }
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 1400px) {
   footer {
     position: fixed;
     right: 0;
     width: 5%;
     height: 100%;
     max-height: none;
+    border: 0;
 
     ul {
       position: absolute;

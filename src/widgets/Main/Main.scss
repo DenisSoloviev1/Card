@@ -12,7 +12,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 110px;
+    padding: 110px 0 50px;
     margin: 0 auto;
     gap: 30px;
     box-sizing: border-box;
@@ -49,7 +49,20 @@ main {
   }
 }
 
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 700px) {
+  main {
+    .container {
+      .intro,
+      .aboutMe,
+      .skills,
+      .portfolio {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
   main {
     .container {
       display: flex;
@@ -67,7 +80,9 @@ main {
         align-items: start;
         width: 50%;
         height: 65%;
+        max-height: 700px;
         border-radius: 0 50px 50px 0;
+        animation: slide 1s ease-in-out;
 
         h2 {
           padding: 5px 10px;
@@ -79,6 +94,19 @@ main {
     h1,
     p {
       text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  main {
+    .container {
+      .intro,
+      .aboutMe,
+      .skills,
+      .portfolio {
+        padding: 50px;
+      }
     }
   }
 }
